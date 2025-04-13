@@ -87,7 +87,8 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
       transition: all 0.3s ease;
-      display: inline-block; /* Allow buttons to sit next to each other on mobile */
+      display: inline-block;
+      margin-top: 1em; /* Added margin to ensure buttons don't overlap */
     }
 
     .btn:hover, .btn-memory:hover {
@@ -98,7 +99,8 @@
     .btn-memory {
       position: fixed;
       top: 20px;
-      right: 20px;
+      left: 20px;
+      z-index: 2;
     }
 
     #countdown {
@@ -129,6 +131,8 @@
 
       .btn-memory {
         padding: 1em;
+        top: 10px;
+        left: 10px;
       }
     }
   </style>
