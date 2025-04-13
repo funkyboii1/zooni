@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Surprise for You 💝</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      padding: 2em;
+      color: #333;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+      color: #ff69b4;
+    }
+
+    .btn {
+      background: #ffb3d9;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 128, 191, 0.3);
+      transition: all 0.3s ease;
+      margin-top: 2em;
+    }
+
+    .btn:hover {
+      background: #ff80bf;
+      transform: scale(1.05);
+    }
+
+    .surprise-content {
+      display: none;
+      margin-top: 2em;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .surprise-content img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 1em;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click Me for a Surprise! 🎁</h1>
+  <button class="btn" onclick="revealSurprise()">Click Me 💘</button>
+
+  <div class="surprise-content" id="surprise">
+    <p style="font-size: 1.3em;">Surprise! 💖 You're the best thing that's ever happened to me zin, you're the only man I want in this whole world, I love you endlessly! </p>
+    <img src="12.JPG" alt="Surprise Photo">
+    <!-- You can replace the image with a GIF or remove it if you just want text -->
+  </div>
+
+  <script>
+    function revealSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
