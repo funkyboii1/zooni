@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday Zooni! 🎉</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
-
-  <!-- Confetti Script -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-
   <style>
     body {
       margin: 0;
@@ -90,62 +86,70 @@
       transform: scale(1.05);
     }
 
-    .btn-memory {
+    /* New button style for 100 Reasons I Love You */
+    .btn-reasons {
       position: fixed;
       top: 20px;
-      right: 20px;
-      background: #ff66b2;
+      left: 20px;
+      background-color: #ffb6c1;
       color: white;
-      padding: 1em;
+      border: none;
+      padding: 0.8em 1.5em;
       border-radius: 50px;
       font-size: 1em;
-      cursor: pointer;
+      text-decoration: none;
       box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .btn-memory:hover {
-      background: #ff3399;
+    .btn-reasons:hover {
+      background-color: #ff99cc;
       transform: scale(1.05);
     }
 
-    #countdown {
-      font-size: 1.5em;
-      color: #ff4da6;
-      margin-top: 20px;
+    /* Styling for the Memories button */
+    .btn-memories {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ffb6c1;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
+    .btn-memories:hover {
+      background-color: #ff99cc;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hearts Animation -->
   <div class="hearts" id="hearts-container"></div>
 
   <h1>Happy Birthday, Cookie Jar! 🎂💖</h1>
 
   <div class="message-box">
     <p>To the most amazing husband in the world, 21 w no kidsssss!</p>
-    <p>You make my world brighter every single day. I hope your birthday is filled with happiness and love. To many many many birthdays with you! I’m so lucky to have you 💕</p>
+    <p>You make my world brighter every single day. I hope your birthday is filled with happiness and love. to many many many birthdays with you! I’m so lucky to have you 💕</p>
     <p>Forever yours,</p>
     <img src="cuties.JPG" alt="Us" style="width: 300px; border-radius: 20px; margin-top: 1em;">
+
     <p><strong>💌 Your Pookie</strong></p>
     <button class="btn" onclick="alert('I love you infinitely zooni! 💗💗💗')">Click for Love</button>
   </div>
 
-  <!-- Countdown Timer -->
-  <div id="countdown"></div>
-
-  <!-- Button for 1 Year & 6 Months -->
-  <a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
-
-  <!-- Memory Button (Fixed at Top-Right) -->
-  <button class="btn-memory" onclick="window.location.href='memories.html'">100 Reasons I Love You ❤️</button>
-
-  <!-- Script for Confetti -->
   <script>
-    // Function to create heart animations
     const hearts = document.getElementById("hearts-container");
+
     function createHeart() {
       const heart = document.createElement("div");
       heart.className = "heart";
@@ -155,32 +159,17 @@
       hearts.appendChild(heart);
       setTimeout(() => heart.remove(), 6000);
     }
+
     setInterval(createHeart, 500);
-
-    // Confetti effect
-    function startConfetti() {
-      confetti();
-    }
-    window.onload = function() {
-      startConfetti();
-    };
-
-    // Countdown timer
-    var countdownDate = new Date("Apr 20, 2025 00:00:00").getTime();
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countdownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-      }
-    }, 1000);
   </script>
+
+  <a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
+  
+  <!-- New button for 100 Reasons -->
+  <a href="100reasons.html" class="btn-reasons">💖 100 Reasons I Love You 💖</a>
+  
+  <!-- New button for Memories -->
+  <a href="memories.html" class="btn-memories">🎥 Memories 💖</a>
 
 </body>
 </html>
