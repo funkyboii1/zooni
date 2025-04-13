@@ -12,7 +12,7 @@
       font-family: 'Quicksand', sans-serif;
       color: #333;
       text-align: center;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
+      overflow-x: hidden;
     }
 
     h1 {
@@ -77,7 +77,7 @@
       margin-top: 1em;
     }
 
-    .btn, .btn-memory {
+    .btn {
       background: #ffb3d9;
       color: white;
       padding: 0.8em 1.5em;
@@ -88,30 +88,33 @@
       box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
       transition: all 0.3s ease;
       display: inline-block;
-      margin-top: 1em; /* Added margin to ensure buttons don't overlap */
+      margin-top: 1em;
     }
 
-    .btn:hover, .btn-memory:hover {
+    .btn:hover {
       background: #ff99cc;
       transform: scale(1.05);
     }
 
-    .btn-memory {
+    .top-left, .top-right {
       position: fixed;
       top: 20px;
-      left: 20px;
-      z-index: 2;
+      padding: 0.7em 1.2em;
+      font-size: 0.9em;
+      z-index: 999;
     }
 
-    #countdown {
-      font-size: 1.5em;
-      color: #ff4da6;
-      margin-top: 20px;
+    .top-left {
+      left: 20px;
+    }
+
+    .top-right {
+      right: 20px;
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.5em;
+        font-size: 2.3em;
       }
 
       p {
@@ -121,18 +124,21 @@
 
       .btn {
         padding: 0.6em 1.2em;
+        font-size: 0.9em;
       }
 
-      .message-box {
-        width: 90%;
-        margin: 1em auto;
-        padding: 1.5em;
-      }
-
-      .btn-memory {
-        padding: 1em;
+      .top-left, .top-right {
+        padding: 0.6em 1em;
+        font-size: 0.8em;
         top: 10px;
+      }
+
+      .top-left {
         left: 10px;
+      }
+
+      .top-right {
+        right: 10px;
       }
     }
   </style>
@@ -141,17 +147,22 @@
 
   <div class="hearts" id="hearts-container"></div>
 
+  <!-- Buttons on the corners -->
+  <a href="100reasons.html" class="btn top-left">100 Reasons I Love You 💖</a>
+  <a href="memories.html" class="btn top-right">🎥 Memories</a>
+
   <h1>Happy Birthday, Cookie Jar! 🎂💖</h1>
 
   <div class="message-box">
     <p>To the most amazing husband in the world, 21 w no kidsssss!</p>
     <p>You make my world brighter every single day. I hope your birthday is filled with happiness and love. To many many many birthdays with you! I’m so lucky to have you 💕</p>
     <p>Forever yours,</p>
-    <img src="cuties.JPG" alt="Us" style="width: 300px; border-radius: 20px; margin-top: 1em;">
-
+    <img src="cuties.JPG" alt="Us">
     <p><strong>💌 Your Pookie</strong></p>
     <button class="btn" onclick="alert('I love you infinitely zooni! 💗💗💗')">Click for Love</button>
   </div>
+
+  <a href="1year6months.html" class="btn">1 Year & 6 Months 💘</a>
 
   <script>
     const hearts = document.getElementById("hearts-container");
@@ -168,10 +179,6 @@
 
     setInterval(createHeart, 500);
   </script>
-
-  <a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
-
-  <a href="100reasons.html" class="btn-memory">100 Reasons I Love You 💖</a>
 
 </body>
 </html>
