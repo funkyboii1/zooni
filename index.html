@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Love! 🎉</title>
+  <title>Happy Birthday Zooni! 🎉</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
@@ -85,6 +85,49 @@
       background: #ff99cc;
       transform: scale(1.05);
     }
+
+    /* 🎀 Cute corner memories button */
+    .corner-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ffd1dc;
+      color: #fff;
+      padding: 0.7em 1.5em;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .corner-btn:hover {
+      background: #ff94c2;
+      transform: scale(1.05);
+    }
+
+    .corner-btn::before, .corner-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    }
+
+    .corner-btn::before {
+      left: 10px;
+    }
+
+    .corner-btn::after {
+      right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -103,6 +146,12 @@
     <button class="btn" onclick="alert('I love you infinitely zooni! 💗💗💗')">Click for Love</button>
   </div>
 
+  <!-- Button for 1 year 6 months -->
+  <a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
+
+  <!-- 🎀 Cute corner Memories button -->
+  <a href="memories.html" class="corner-btn">Memories 🎞️</a>
+
   <script>
     const hearts = document.getElementById("hearts-container");
 
@@ -119,6 +168,5 @@
     setInterval(createHeart, 500);
   </script>
 
-<a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
 </body>
 </html>
