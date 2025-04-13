@@ -12,6 +12,7 @@
       font-family: 'Quicksand', sans-serif;
       color: #333;
       text-align: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     h1 {
@@ -69,7 +70,14 @@
       z-index: 1;
     }
 
-    .btn {
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      margin-top: 1em;
+    }
+
+    .btn, .btn-memory {
       background: #ffb3d9;
       color: white;
       padding: 0.8em 1.5em;
@@ -79,55 +87,49 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
       transition: all 0.3s ease;
+      display: inline-block; /* Allow buttons to sit next to each other on mobile */
     }
 
-    .btn:hover {
+    .btn:hover, .btn-memory:hover {
       background: #ff99cc;
       transform: scale(1.05);
     }
 
-    /* New button style for 100 Reasons I Love You */
-    .btn-reasons {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: #ffb6c1;
-      color: white;
-      border: none;
-      padding: 0.8em 1.5em;
-      border-radius: 50px;
-      font-size: 1em;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-reasons:hover {
-      background-color: #ff99cc;
-      transform: scale(1.05);
-    }
-
-    /* Styling for the Memories button */
-    .btn-memories {
+    .btn-memory {
       position: fixed;
       top: 20px;
       right: 20px;
-      background-color: #ffb6c1;
-      color: white;
-      padding: 0.8em 1.5em;
-      border: none;
-      border-radius: 50px;
-      font-size: 1em;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(255, 128, 191, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
     }
 
-    .btn-memories:hover {
-      background-color: #ff99cc;
-      transform: scale(1.05);
+    #countdown {
+      font-size: 1.5em;
+      color: #ff4da6;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.1em;
+        width: 90%;
+      }
+
+      .btn {
+        padding: 0.6em 1.2em;
+      }
+
+      .message-box {
+        width: 90%;
+        margin: 1em auto;
+        padding: 1.5em;
+      }
+
+      .btn-memory {
+        padding: 1em;
+      }
     }
   </style>
 </head>
@@ -139,7 +141,7 @@
 
   <div class="message-box">
     <p>To the most amazing husband in the world, 21 w no kidsssss!</p>
-    <p>You make my world brighter every single day. I hope your birthday is filled with happiness and love. to many many many birthdays with you! I’m so lucky to have you 💕</p>
+    <p>You make my world brighter every single day. I hope your birthday is filled with happiness and love. To many many many birthdays with you! I’m so lucky to have you 💕</p>
     <p>Forever yours,</p>
     <img src="cuties.JPG" alt="Us" style="width: 300px; border-radius: 20px; margin-top: 1em;">
 
@@ -164,12 +166,8 @@
   </script>
 
   <a href="1year6months.html" class="btn" style="margin-top: 1em;">1 Year & 6 Months 💘</a>
-  
-  <!-- New button for 100 Reasons -->
-  <a href="100reasons.html" class="btn-reasons">💖 100 Reasons I Love You 💖</a>
-  
-  <!-- New button for Memories -->
-  <a href="memories.html" class="btn-memories">🎥 Memories 💖</a>
+
+  <a href="100reasons.html" class="btn-memory">100 Reasons I Love You 💖</a>
 
 </body>
 </html>
